@@ -24,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::resource('details', 'App\Http\Controllers\DetailController');
 Route::resource('users', 'App\Http\Controllers\UserController');
 Route::resource('singles', 'App\Http\Controllers\SingleController')->except(['create','edit']);
 Route::resource('albums', 'App\Http\Controllers\AlbumController')->except(['create','edit']);
