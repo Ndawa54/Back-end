@@ -31,9 +31,12 @@ class DetailController extends Controller
     {
         $detail = new Detail();
         $detail->user_id = $request->user_id;
-        $detail->country = $request->country;
+        $detail->destination = $request->destination;
         $detail->reason = $request->reason; 
         $detail->description = $request->description;
+        $detail->status = $request->status;
+        $detail->interview_date = $request->interview_date;
+        $detail->interview_status = $request->interview_status;
         $detail->save();
     }
 
@@ -61,9 +64,12 @@ class DetailController extends Controller
     {
         $detail = Detail::find($id);
         $detail->user_id = $request->user_id;
-        $detail->country = $request->country;
+        $detail->destination = $request->destination;
         $detail->reason = $request->reason; 
         $detail->description = $request->description;
+        $detail->status = $request->status;
+        $detail->interview_date = $request->interview_date;
+        $detail->interview_status = $request->interview_status;
         $detail->save();
         return response()->json($request);
     }

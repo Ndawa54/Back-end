@@ -12,6 +12,7 @@ class Detail extends Model
         'user_id',
         'country',
         'reason',
-        'description'
+        'description',
+        'status'
     ];
 }
